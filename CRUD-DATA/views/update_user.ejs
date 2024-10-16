@@ -1,0 +1,63 @@
+<!--include header-->
+<%-include('include/_header')%>
+<!--/include header-->
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left"></i> Lista de mascotas</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Actualizar Mascota</h2>
+            <span class="text-light">Use el formulario para actualizar de una mascota</span>
+        </div>
+        <form method="POST" id="update_user">
+            <div class="new_user">
+                <div class="form-group">
+                    <label for="name" class="text-light">Nombre</label>
+                    <input type="hidden" name="id" value="<%=user._id %>">
+                    <input type="text" name="name" value="<%=user.name %>" placeholder="Cloe">
+                </div>
+                <div class="form-group">
+                    <label for="animal" class="text-light">Animal</label>
+                    <input type="text" name="animal" value="<%=user.animal %>" placeholder="Perro">
+                </div>
+                <div class="form-group">
+                    <label for="raza" class="text-light">Raza</label>
+                    <input type="text" name="raza" value="<%=user.raza %>" placeholder="Shitzu">
+                </div>
+                <div class="form-group">
+                    <label for="age" class="text-light">Años</label>
+                    <input type="number" name="age" value="<%=user.age %>" placeholder="7">
+                </div>
+                <div class="form-group">
+                    <label for="service" class="text-light">Servicio</label>
+                    <input type="text" name="service" value="<%=user.service %>" placeholder="Baño">
+                </div>
+                <div class="form-group">
+                    <label for="name2" class="text-light">Dueño</label>
+                    <input type="text" name="name2" value="<%=user.name2 %>" placeholder="Yipsi Diaz">
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="text-light">Teléfono</label>
+                    <input type="number" name="phone" value="<%=user.phone %>" placeholder="3193856404">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="text-light">Correo</label>
+                    <input type="email" name="email" value="<%=user.email %>" placeholder="carolad079@gmail.com">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Guardar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->
